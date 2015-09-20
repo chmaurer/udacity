@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+//coloring taken from http://www.google.com/design/spec/style/color.html#color-color-palette
 public class MainActivity extends AppCompatActivity {
 
     private static final String SPOTIFY_STREAMER = "Spotify Streamer";
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //doing the onClick's as explained at http://developer.android.com/guide/topics/ui/controls/button.html#HandlingEvents
     public void onClickSpotifyStreamer(View v) {
         Toast.makeText(getBaseContext(), SPOTIFY_STREAMER, Toast.LENGTH_SHORT).show();
     }
