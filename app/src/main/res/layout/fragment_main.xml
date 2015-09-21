@@ -12,8 +12,13 @@
     android:weightSum="1"
     tools:context=".MainActivity$PlaceholderFragment"
     android:elevation="@dimen/highlight_alpha_material_dark"
-    android:background="#2196f3">
+    android:background="@color/ScreenBackgrund">
 
+    <ListView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview_projects" />
+
+<!--
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,5 +82,5 @@
         android:layout_gravity="center_horizontal"
         android:onClick="onClickCapstone"
         android:background="#0d47a1"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF" />-->
 </LinearLayout>
