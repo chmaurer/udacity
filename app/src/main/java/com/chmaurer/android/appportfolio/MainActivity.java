@@ -4,7 +4,7 @@
 Git:
         http://stackoverflow.com/questions/16644946/how-do-you-sync-projects-to-github-with-android-studio
         https://help.github.com/articles/adding-a-remote/
-        
+
 Coloring: taken from http://www.google.com/design/spec/style/color.html#color-color-palette
         https://developer.android.com/samples/BasicMediaRouter/res/values/colors.html   (for using colors.xml as in feedback for first submission)
         http://stackoverflow.com/questions/3769762/android-color-xml-resource-file      (for using colors.xml as in feedback for first submission)
@@ -41,7 +41,8 @@ Regarding the different things I tried for the OnClickListener:
         http://stackoverflow.com/questions/20304282/android-button-not-responding-to-click-event
         http://stackoverflow.com/questions/13443811/cannot-call-getsupportfragmentmanager-from-activity
         http://stackoverflow.com/questions/28849554/cannot-resolve-method-addint-new-tfragment-commit-in-android-studion-1-0
-
+After finding https://discussions.udacity.com/t/best-practice-for-click-events/21821/12 and
+http://www.androidconstructionset.com/a-brief-history-of-onclick/, I am reverting back to my version with a listener per button and each button defined in xml file
 
 Displaying Text on Button:
         http://stackoverflow.com/questions/22102759/text-is-not-displayed-on-button-widget
@@ -62,103 +63,27 @@ Udacity:
 
 package com.chmaurer.android.appportfolio;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.view.View.OnClickListener;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
 
-
-public class MainActivity extends Activity {
-    List<Button> buttons = new ArrayList<>();
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button buttonSpotify = new Button(getApplicationContext());
-        buttonSpotify.setText(getString(R.string.SpotifyStreamer));
-        buttonSpotify.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View b) {
-                Toast.makeText(getApplicationContext(), getText(R.string.SpotifyStreamer),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        buttons.add(buttonSpotify);
-
-        Button buttonScoresApp = new Button(getApplicationContext());
-        buttonSpotify.setText(getString(R.string.ScoresApp));
-        buttonSpotify.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View b) {
-                Toast.makeText(getApplicationContext(), getText(R.string.ScoresApp),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        buttons.add(buttonScoresApp);
-
-        Button buttonLibraryApp = new Button(getApplicationContext());
-        buttonSpotify.setText(getString(R.string.LibraryApp));
-        buttonSpotify.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View b) {
-                Toast.makeText(getApplicationContext(), getText(R.string.LibraryApp),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        buttons.add(buttonLibraryApp);
-
-        Button buttonBuildItBigger = new Button(getApplicationContext());
-        buttonSpotify.setText(getString(R.string.BuildItBigger));
-        buttonSpotify.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View b) {
-                Toast.makeText(getApplicationContext(), getText(R.string.BuildItBigger),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        buttons.add(buttonBuildItBigger);
-
-        Button buttonXyzReader = new Button(getApplicationContext());
-        buttonSpotify.setText(getString(R.string.XYZReader));
-        buttonSpotify.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View b) {
-                Toast.makeText(getApplicationContext(), getText(R.string.XYZReader),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        buttons.add(buttonXyzReader);
-
-        Button buttonCapstoneApp = new Button(getApplicationContext());
-        buttonSpotify.setText(getString(R.string.Capstone));
-        buttonSpotify.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View b) {
-                Toast.makeText(getApplicationContext(), getText(R.string.Capstone),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        buttons.add(buttonCapstoneApp);
-
-
         PlaceholderFragment phf = new PlaceholderFragment();
-        phf.setButtons(buttons);
         if (savedInstanceState == null) {
-            this.getFragmentManager().beginTransaction()
-                    .add(R.id.container, phf)
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
     }
@@ -189,27 +114,49 @@ public class MainActivity extends Activity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-        List<Button> buttons;
-
         public PlaceholderFragment() {
 
         }
 
-        public void setButtons(List<Button> _buttons) {
-            buttons = _buttons;
-        }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            ArrayAdapter<Button> arrayAdapter = new ArrayAdapter<>(getActivity(), R.layout.listitem_project, R.id.list_item_projectbutton, buttons);
-            ListView projectsListView = (ListView) rootView.findViewById(R.id.listview_projects);
-            projectsListView.setAdapter(arrayAdapter);
-            return rootView;
+            return inflater.inflate(R.layout.fragment_main, container, false);
         }
 
 
+    }
+
+    public void onClickSpotifyStreamer(View view) {
+        Toast.makeText(getBaseContext(), getString(R.string.SpotifyStreamer),
+                Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void onClickFootballScoresApp(View view) {
+        Toast.makeText(getBaseContext(), getString(R.string.ScoresApp),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickLibraryApp(View view) {
+        Toast.makeText(getBaseContext(), getString(R.string.LibraryApp),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickBuildItBigger(View view) {
+        Toast.makeText(getBaseContext(), getString(R.string.BuildItBigger),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickXYZReader(View view) {
+        Toast.makeText(getBaseContext(), getString(R.string.XYZReader),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickCapstoneProject(View view) {
+        Toast.makeText(getBaseContext(), getString(R.string.Capstone),
+                Toast.LENGTH_SHORT).show();
     }
 
 

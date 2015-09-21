@@ -13,74 +13,74 @@
     tools:context=".MainActivity$PlaceholderFragment"
     android:elevation="@dimen/highlight_alpha_material_dark"
     android:background="@color/ScreenBackgrund">
-
+<!--
     <ListView android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listview_projects" />
+-->
 
-<!--
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Spotify Streamer"
+        android:text="@string/SpotifyStreamer"
         android:id="@+id/ButtonSpotifyStreamer"
         android:layout_gravity="center_horizontal"
-        android:background="#0d47a1"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="5dp"
+        android:background="@color/ButtonBackground"
+        android:textColor="@color/ButtonText"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClickSpotifyStreamer" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Football Scores App"
+        android:text="@string/ScoresApp"
         android:id="@+id/ButtonFootballScoresApp"
         android:layout_gravity="center_horizontal"
-        android:textColor="#FFFFFF"
-        android:background="#0d47a1"
-        android:onClick="onClickScoresApp"
-        android:layout_marginBottom="5dp" />
+        android:textColor="@color/ButtonText"
+        android:background="@color/ButtonBackground"
+        android:onClick="onClickFootballScoresApp"
+        android:layout_marginBottom="@dimen/button_margin_bottom" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Library App"
+        android:text="@string/LibraryApp"
         android:id="@+id/ButtonLibraryApp"
         android:layout_gravity="center_horizontal"
         android:onClick="onClickLibraryApp"
-        android:background="#0d47a1"
-        android:layout_marginBottom="5dp"
-        android:textColor="#FFFFFF" />
+        android:background="@color/ButtonBackground"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:textColor="@color/ButtonText" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Build it Bigger"
+        android:text="@string/BuildItBigger"
         android:id="@+id/ButtonBuildItBigger"
         android:layout_gravity="center_horizontal"
         android:onClick="onClickBuildItBigger"
-        android:background="#0d47a1"
-        android:layout_marginBottom="5dp"
-        android:textColor="#FFFFFF" />
+        android:background="@color/ButtonBackground"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:textColor="@color/ButtonText" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="XYZ Reader"
+        android:text="@string/XYZReader"
         android:id="@+id/ButtonXYZReader"
         android:layout_gravity="center_horizontal"
         android:onClick="onClickXYZReader"
-        android:background="#0d47a1"
-        android:layout_marginBottom="5dp"
-        android:textColor="#FFFFFF" />
+        android:background="@color/ButtonBackground"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:textColor="@color/ButtonText" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Capstone"
+        android:text="@string/Capstone"
         android:id="@+id/ButtonCapstone"
         android:layout_gravity="center_horizontal"
-        android:onClick="onClickCapstone"
-        android:background="#0d47a1"
-        android:textColor="#FFFFFF" />-->
+        android:onClick="onClickCapstoneProject"
+        android:background="@color/ButtonBackground"
+        android:textColor="@color/ButtonText" />
 </LinearLayout>
