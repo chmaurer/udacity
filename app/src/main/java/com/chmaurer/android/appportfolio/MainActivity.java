@@ -9,6 +9,12 @@ Coloring: taken from http://www.google.com/design/spec/style/color.html#color-co
         https://developer.android.com/samples/BasicMediaRouter/res/values/colors.html   (for using colors.xml as in feedback for first submission)
         http://stackoverflow.com/questions/3769762/android-color-xml-resource-file      (for using colors.xml as in feedback for first submission)
 
+For highlighting buttons on click:
+        https://discussions.udacity.com/t/what-is-the-best-way-to-change-button-colors-with-touch-state/20620/4
+        http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList
+        https://github.com/cyrilmottier/DrawablePresentation/blob/master/DrawableListing/res/drawable/button_focused.xml
+        http://stackoverflow.com/questions/3882064/how-to-change-color-of-button-in-android-when-clicked
+
 For using String externalization:
         http://developer.android.com/guide/topics/resources/string-resource.html
 
@@ -57,7 +63,8 @@ Other issues:
 
 Udacity:
         Using feedback from first app submission (string and color externalization)
-        Using the sunshine project and the learnings
+        Using the sunshine project (https://github.com/udacity/Sunshine-Version-2.git)
+        Using the learnings and instructions from the udacity lesson
 */
 
 

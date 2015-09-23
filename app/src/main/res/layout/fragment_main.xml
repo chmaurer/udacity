@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ScreenBackgrund"
     android:baselineAligned="false"
+    android:elevation="@dimen/highlight_alpha_material_dark"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -10,77 +12,76 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:textAlignment="center"
     android:weightSum="1"
-    tools:context=".MainActivity$PlaceholderFragment"
-    android:elevation="@dimen/highlight_alpha_material_dark"
-    android:background="@color/ScreenBackgrund">
-<!--
-    <ListView android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listview_projects" />
--->
+    tools:context=".MainActivity$PlaceholderFragment">
+    <!--
+        <ListView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview_projects" />
+    -->
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/SpotifyStreamer"
         android:id="@+id/ButtonSpotifyStreamer"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/ButtonBackground"
-        android:textColor="@color/ButtonText"
-        android:layout_marginBottom="@dimen/button_margin_bottom"
-        android:onClick="onClickSpotifyStreamer" />
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ScoresApp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:background="@drawable/button_drawable"
+        android:onClick="onClickSpotifyStreamer"
+        android:text="@string/SpotifyStreamer"
+        android:textColor="@color/ButtonText" />
+    <!--  android:background="@color/ButtonBackground"-->
+
+    <Button
         android:id="@+id/ButtonFootballScoresApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/ButtonText"
-        android:background="@color/ButtonBackground"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:background="@drawable/button_drawable"
         android:onClick="onClickFootballScoresApp"
-        android:layout_marginBottom="@dimen/button_margin_bottom" />
+        android:text="@string/ScoresApp"
+        android:textColor="@color/ButtonText" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/LibraryApp"
         android:id="@+id/ButtonLibraryApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:background="@drawable/button_drawable"
         android:onClick="onClickLibraryApp"
-        android:background="@color/ButtonBackground"
-        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:text="@string/LibraryApp"
         android:textColor="@color/ButtonText" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/BuildItBigger"
         android:id="@+id/ButtonBuildItBigger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:background="@drawable/button_drawable"
         android:onClick="onClickBuildItBigger"
-        android:background="@color/ButtonBackground"
-        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:text="@string/BuildItBigger"
         android:textColor="@color/ButtonText" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/XYZReader"
         android:id="@+id/ButtonXYZReader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:onClick="onClickXYZReader"
-        android:background="@color/ButtonBackground"
         android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:background="@drawable/button_drawable"
+        android:onClick="onClickXYZReader"
+        android:text="@string/XYZReader"
         android:textColor="@color/ButtonText" />
 
     <Button
+        android:id="@+id/ButtonCapstone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Capstone"
-        android:id="@+id/ButtonCapstone"
         android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_drawable"
         android:onClick="onClickCapstoneProject"
-        android:background="@color/ButtonBackground"
+        android:text="@string/Capstone"
         android:textColor="@color/ButtonText" />
 </LinearLayout>
