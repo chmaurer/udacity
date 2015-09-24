@@ -13,23 +13,22 @@
     android:textAlignment="center"
     android:weightSum="1"
     tools:context=".MainActivity$PlaceholderFragment">
-    <!--
+
         <ListView android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/listview_projects" />
-    -->
 
-    <Button
-        android:id="@+id/ButtonSpotifyStreamer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/button_margin_bottom"
-        android:background="@drawable/button_drawable"
-        android:onClick="onClickSpotifyStreamer"
-        android:text="@string/SpotifyStreamer"
-        android:textColor="@color/ButtonText" />
-    <!--  android:background="@color/ButtonBackground"-->
+    <!--
+       <Button
+           android:id="@+id/ButtonSpotifyStreamer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginBottom="@dimen/button_margin_bottom"
+           android:background="@drawable/button_drawable"
+           android:onClick="onClickSpotifyStreamer"
+           android:text="@string/SpotifyStreamer"
+           android:textColor="@color/ButtonText" />
 
     <Button
         android:id="@+id/ButtonFootballScoresApp"
@@ -83,5 +82,5 @@
         android:background="@drawable/button_drawable"
         android:onClick="onClickCapstoneProject"
         android:text="@string/Capstone"
-        android:textColor="@color/ButtonText" />
+        android:textColor="@color/ButtonText" />-->
 </LinearLayout>
