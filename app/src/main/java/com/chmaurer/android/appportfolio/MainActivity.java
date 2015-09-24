@@ -24,6 +24,7 @@ Layouts:
 
 Displaying a toast:
         http://stackoverflow.com/questions/3500197/how-to-display-toast-in-android
+        http://stackoverflow.com/questions/7803256/android-toast-message-is-not-showing (Toast not showing in Custom Adapter)
 
 Regarding the different things I tried for the OnClickListener:
         http://developer.android.com/reference/android/widget/Button.html
@@ -63,6 +64,7 @@ Other issues:
         http://stackoverflow.com/questions/22005714/set-and-get-android-button-text-programatically (setting Text on Button)
         http://stackoverflow.com/questions/28849554/cannot-resolve-method-addint-new-tfragment-commit-in-android-studion-1-0
         http://stackoverflow.com/questions/16615038/what-is-the-shortcut-to-auto-import-all-in-android-studio
+        http://stackoverflow.com/questions/4984313/spacing-between-listview-items-android (for spacing of buttons in the listview)
 
 Udacity:
         Using feedback from first app submission (string and color externalization, uncommenting Menu)

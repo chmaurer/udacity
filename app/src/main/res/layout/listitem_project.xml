@@ -3,5 +3,4 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:id="@+id/list_item_projectbutton"
     android:textColor="@color/ButtonText"
-    android:background="@drawable/button_drawable"
-    android:layout_marginBottom="@dimen/button_margin_bottom" />
+    android:background="@drawable/button_drawable"/>
