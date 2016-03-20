@@ -1,2 +1,2 @@
 # (Udacity) App Portfolio
-The appportfolio project for my Udacity Android Developer Nano Degree. It shows a few buttons that should eventually launch other apps.
+The appportfolio project for my Udacity Android Developer Nano Degree. It shows a few buttons that should eventually launch other apps. The other apps can also be found im by repo.
